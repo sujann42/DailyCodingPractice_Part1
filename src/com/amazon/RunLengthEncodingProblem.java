@@ -1,10 +1,14 @@
 package com.amazon;
 
 
-/*While solving encoding problem: order matters. aaabbccc = 3a2b3c whereas aaabbccca = 3a2b3c1a not 4a2b3c*/
+/*While solving encoding problem: order matters.
+    aaabbccc = 3a2b3c whereas aaabbccca = 3a2b3c1a not 4a2b3c
+*/
 public class RunLengthEncodingProblem {
     public static void main(String[] args) {
-        System.out.println(encode("aabccab"));
+        System.out.println(encode("zzzaabccab"));
+        //Output will be : 3z2a1b2c1a1b
+        //Here the Big O will be O(N).
     }
 
     public static String encode(String input) {
@@ -13,25 +17,26 @@ public class RunLengthEncodingProblem {
         if (input == null || input.length() == 0) {
             return "";
         }
-        StringBuilder sb = new StringBuilder();
-        int counter = 0;
-        char prevChar = 0;
+        StringBuilder sbl = new StringBuilder();
+        int charCounter = 0;
+        char previousChar = 0;
         char[] inputChars = input.toCharArray();
 
         //iterate over char array
         for (char current : inputChars) {
-            if (current == prevChar) {
-                counter++;
+            if (current == previousChar) {
+                charCounter++;
             } else {
-                if (prevChar != 0) {
-                    sb.append(counter).append(prevChar);
+                if (previousChar != 0) {
+                    sbl.append(charCounter).append(previousChar);
                 }
-                prevChar = current;
-                counter = 1;
+                previousChar = current;
+                charCounter = 1;
             }
         }
-        sb.append(counter).append(prevChar);
-        return sb.toString();
+        sbl.append(charCounter).append(previousChar);
+        return sbl.toString();
     }
 
 }
+
