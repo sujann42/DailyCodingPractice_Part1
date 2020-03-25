@@ -1,4 +1,4 @@
-package com.amazon;
+package com.leetcodepractice;
 
 
 /*While solving encoding problem: order matters.
