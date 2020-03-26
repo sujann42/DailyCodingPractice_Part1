@@ -1,0 +1,16 @@
+1) Iterate over a map:
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+for(Character chars: map.keySet()){
+    if(map.get(chars) > -1 && map.get(chars) < max){
+       max = map.get(chars);
+    }
+}
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2) Printing a Map:
+for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            System.out.println("Key = " + entry.getKey() +
+                    ", Value = " + entry.getValue());
+        }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+3)
