@@ -13,4 +13,10 @@ for (Map.Entry<Character, Integer> entry : map.entrySet()) {
         }
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-3)
+
+
+#) How to make class immutable?
+1) Declare class as final
+2) Decalre final variables
+3) Generate getters only == Not Setters
+4) Create Parameterized constructor.
