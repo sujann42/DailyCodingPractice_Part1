@@ -23,6 +23,4 @@ public class LoggingInJava {
         fileHandler.setFormatter(formatter);
 
     }
-
-
 }
