@@ -1,4 +1,4 @@
-package other.testing;
+package com.testing;
 
 import com.leetcodepractice.CreatingImmutableClass;
 

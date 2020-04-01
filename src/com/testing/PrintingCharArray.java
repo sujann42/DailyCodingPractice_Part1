@@ -1,4 +1,4 @@
-package other.testing;
+package com.testing;
 
 public class PrintingCharArray {
     public static void main(String[] args) {
